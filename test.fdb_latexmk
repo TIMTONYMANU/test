@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771753638.1032 "c:/Users/86186/Desktop/test/test.tex" "test.pdf" "test" 1771753640.47312 2
+["pdflatex"] 1771772636.76596 "c:/Users/86186/Desktop/test/test.tex" "test.pdf" "test" 1771772639.15572 2
   "C:/Users/86186/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1771746527 24125621 761200f8466e5ad378b1d604999de0f7 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1739252586 19704352 1e10e74402e59d54499af795caf0b135 ""
   "D:/Miktex/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -40,6 +40,7 @@
   "D:/Miktex/tex/latex/ctex/engine/ctex-engine-pdftex.def" 1657818410 20297 90a9347d15e74883d4c66bd8b9fe695e ""
   "D:/Miktex/tex/latex/ctex/fontset/ctex-fontset-windows.def" 1657818410 4952 f781dcade04ad6ae6d09fde004a752be ""
   "D:/Miktex/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def" 1657818410 4622 4f152431881516d2a81822d98108b61f ""
+  "D:/Miktex/tex/latex/enumitem/enumitem.sty" 1738917170 52272 63d293bc0d496619edb57585740861a2 ""
   "D:/Miktex/tex/latex/fontspec/fontspec.sty" 1642213122 1656 7e824878bad4df5a3e8bba4e463d9126 ""
   "D:/Miktex/tex/latex/geometry/geometry.cfg" 1578053545 1104 7ac475a4e3466b0b43e138e9356bda83 ""
   "D:/Miktex/tex/latex/geometry/geometry.sty" 1578053545 42759 9cf6c5257b1bc7af01a58859749dd37a ""
@@ -51,9 +52,10 @@
   "D:/Miktex/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "D:/Miktex/tex/latex/zhnumber/zhnumber-utf8.cfg" 1657817710 5700 603e2f09dad175efabc8594730623a0b ""
   "D:/Miktex/tex/latex/zhnumber/zhnumber.sty" 1657817710 38160 aafa8d740e4f21b62a4acd4835e54359 ""
-  "c:/Users/86186/Desktop/test/test.tex" 1771753623 14837 02adf06bd973eac0e4dcb03367695b77 ""
-  "test.aux" 1771753638 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "test.tex" 1771753623 14837 02adf06bd973eac0e4dcb03367695b77 ""
+  "D:/Miktex/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
+  "c:/Users/86186/Desktop/test/test.tex" 1771772626 15696 1c943319f33da6bfd24c5b7881272fee ""
+  "test.aux" 1771772636 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "test.tex" 1771772626 15696 1c943319f33da6bfd24c5b7881272fee ""
   (generated)
   "test.aux"
   "test.log"

@@ -74,6 +74,10 @@ INPUT D:\Miktex\tex\latex\ctex\fontset\ctex-fontset-windows.def
 INPUT C:\WINDOWS\Fonts\msyh.ttc
 INPUT D:\Miktex\tex\latex\ctex\config\ctex.cfg
 INPUT D:\Miktex\tex\latex\ctex\config\ctex.cfg
+INPUT D:\Miktex\tex\xelatex\xecjk\xeCJK.sty
+INPUT D:\Miktex\tex\xelatex\xecjk\xeCJK.sty
+INPUT D:\Miktex\tex\latex\enumitem\enumitem.sty
+INPUT D:\Miktex\tex\latex\enumitem\enumitem.sty
 INPUT D:\Miktex\tex\latex\amsmath\amsmath.sty
 INPUT D:\Miktex\tex\latex\amsmath\amsmath.sty
 INPUT D:\Miktex\tex\latex\amsmath\amsopn.sty
