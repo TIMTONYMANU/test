@@ -1,16 +1,35 @@
 \documentclass[zihao=5, a4paper, UTF8]{ctexart} % 【要求1】全局基础字号设为五号字 (10.5pt)
-
 \usepackage{xeCJK}
 \usepackage{enumitem}
-
-
-% ==================== 数学与排版宏包 ====================
 \usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{fontspec}
+
+
+% 【要求1】：英文和数字为 Times New Roman
+\setmainfont{Times New Roman}
+
+% 【要求1】：中文为纯正宋体 (开启 AutoFakeBold 让标题可以正常加粗)
+\setCJKmainfont{SimSun}[AutoFakeBold=true]
+
+\AtBeginDocument{
+  \xeCJKsetup{
+    CJKglue=\hskip 1.7pt
+  }
+}
+
+% 【要求2】：公式字号设为 12 磅 (语法: 基础字号, 公式字号, 上标字号, 双重上标)
+\DeclareMathSizes{10.5}{12}{9}{7} 
+
+% ==================== 【要求3】行间距 ====================
+
+\setstretch{1.5} % 严格对应 Word 中的 1.5 倍行距
 
 % ==================== 【要求4】页面与边距 ====================
 % A4纸宽21cm，上下2cm，左右2.5cm。正文有效宽度恰好为 16cm。
 % 要求页脚距离页边距1.5cm，所以 footskip (正文底部到页脚的距离) = 2cm - 1.5cm = 0.5cm。
-\usepackage{geometry}
+
 \geometry{
     a4paper,
     top=2cm,
@@ -20,77 +39,54 @@
     footskip=0.5cm 
 }
 
-% ==================== 【要求3】行间距 ====================
-\usepackage{setspace}
-
-
-% ==================== 【要求1 & 2】字体与字间距 ====================
-\usepackage{fontspec}
-
-% 【要求2计算】：Word中的加宽0.7磅。五号字是10.5pt，0.7/10.5 ≈ 6.67%。
-% 设置 LetterSpace=6.67 完美模拟 Word 的“加宽0.7磅”。
-% 【要求1】：英文和数字为 Times New Roman
-\setmainfont{Times New Roman}
-
-% 【要求1】：中文为纯正宋体 (开启 AutoFakeBold 让标题可以正常加粗)
-\setCJKmainfont{SimSun}[AutoFakeBold=true]
-
-\newcommand{\forceCJKspace}{、hskip 5.7pt plus 0.08pt}
-\makeatletter
-\def\CJKglue{\forceCJKspace}
-\makeatother
-
-% 【要求1】：公式字号设为 12 磅 (语法: 基础字号, 公式字号, 上标字号, 双重上标)
-\DeclareMathSizes{10.5}{12}{9}{7} 
-
 % ==================== 【要求5】标点符号强制宋体 ====================
 % 强制将英文半角的  , . : ; 划分为中文字符类，从而让它们不再使用Times，而是使用宋体渲染。
 \xeCJKDeclareCharClass{CJK}{ "002C, "002E, "003A, "003B}
 
-% ==================== 【要求6】完美模拟 Word 制表位 ====================
-% 因为正文宽度正好是 16cm。
-% 左对齐(0cm)、居中(8cm处)、右对齐(16cm最右侧)。
-\newcommand{\wordtab}[3]{%
-    \noindent
-    \makebox[0pt][l]{#1}% 左侧起点
-    \hspace*{8cm}\makebox[0pt][c]{#2}% 绝对 8cm 处居中
-    \hfill\makebox[0pt][r]{#3}% 绝对 16cm 处右对齐
-    \par
-}
-
 % 消除默认的段落缩进（可选，为了贴合试卷排版）
 \setlength{\parindent}{0pt}
 
-
-
 \begin{document}
 
-% —————— 这里为你演示【要求6】的制表位效果 ——————
-%\wordtab{姓名：\underline{\hspace{2cm}}}{班级：\underline{\hspace{2cm}}}{考号：\underline{\hspace{2cm}}}
-%\vspace{1em}
-% ————————————————————————————————————————————————
-\xeCJKsetup{CJKglue=\hskip 5.7pt plus 0.08pt}
-\addfontfeature{LetterSpace=0}
-\begin{center}
-    \textbf{\fontsize{16}{17}\selectfont 2023 年量子物理思维挑战夏令营原创模拟试题}\\
-    \textbf{\fontsize{12}{17}\selectfont 第一套}\\
-    \textbf{\fontsize{10}{17}\selectfont (2023 年 7 月 16 日上午 8:30-11:30)}
-\end{center}
+\begingroup
+\setstretch{1.0}  % 标题区域单倍行距
 
-\begin{center}
-    \textbf{\fontsize{12}{17}\selectfont 考生必读}
-\end{center}
+% ===== 主标题 =====
+\vspace{3pt}
+{\centering
+\fontsize{16pt}{18pt}\selectfont\bfseries
+2023年量子物理思维挑战夏令营原创模拟试题\par}
+\vspace{13pt}
 
+% ===== 副标题 =====
+\vspace{3pt}
+{\centering
+\fontsize{16pt}{18pt}\selectfont\bfseries
+第一套\par}
+\vspace{13pt}
 
+% ===== 日期 =====
+\vspace{3pt}
+{\centering
+\fontsize{10pt}{14pt}\selectfont\bfseries
+(2023 年 7 月 16 日上午 8:30-11:30)\par}
+\vspace{10.5pt}
 
+% ===== 考生必读 =====
 
+{\centering
+\fontsize{12pt}{16pt}\selectfont\bfseries
+考生必读\par}
+\vspace{10.5pt}
+
+\endgroup
 % 使用 wide 参数可以让编号后的文字换行时不再产生额外的悬挂缩进
 % leftmargin 控制整体缩进（比如缩进 2 个字符）
 % labelindent 控制编号距离左边界的距离
 
 \begin{enumerate}[
     label={\arabic*、}, 
-    wide=2.5em,        % 核心参数：让编号和正文在同一水平线下起步，换行不缩进
+    wide=2em,        % 核心参数：让编号和正文在同一水平线下起步，换行不缩进
     labelindent=0pt,
     nosep
 ]
@@ -100,15 +96,8 @@
     \item \textbf{需要阅卷老师评阅的内容一定要写在答题纸上；写在试题纸上和草稿纸上的解答一律不能得分。}
 \end{enumerate}
 
-
-
-
-\setstretch{1.5} % 严格对应 Word 中的 1.5 倍行距
-
 \vspace{2em}
-
-
-    
+   
 一、(40 分)如图所示, 研究一个简化的不倒翁刚体模型, 不倒翁下半部分为质量为 $m$ 半径为 $R$ 的匀质薄半球壳, 上半部分为质量也为 $m$ 的匀质圆锥薄板, 已知该不倒翁系统的质心仍在半球的球心 $O$.
 
 \qquad(1)求圆锥的半顶角 $\theta$ 以及不倒翁绕过球心某一水平直径的转动惯量 $I$.
@@ -195,7 +184,5 @@
 \qquad(2)相对论条件下, 试求碰后 $m$ 出射方向的角分布 $f(\theta) = \frac{\text{d}P}{\text{d}\theta}$ (按其在实验系下出射角的概率分布), 并求出最概然方向. 计算最概然方向时给出 $M=2m, v=0.6c$ 时的结果.
 
 \qquad(3)在相对论条件下试求碰后 $m$ 总能量随能量的概率分布, 注意写出能量分布范围.
-
-
 
 \end{document}
